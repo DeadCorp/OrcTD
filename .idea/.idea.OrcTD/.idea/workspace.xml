@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default_env.tres" beforeDir="false" afterPath="$PROJECT_DIR$/default_env.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_creature/3d_model.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_creature/test_creature.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_creature/test_creature.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/all_models.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/all_models.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +21,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="27Y6qKv69w8YSN21doDF8VdB2wr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -101,6 +100,7 @@
       <workItem from="1649697523458" duration="1013000" />
       <workItem from="1649698775618" duration="1697000" />
       <workItem from="1649700666320" duration="627000" />
+      <workItem from="1649708217585" duration="738000" />
     </task>
     <servers />
   </component>
