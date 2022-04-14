@@ -23,7 +23,7 @@ public class SortModels : Node
   {
 	  if (Engine.EditorHint) {
 		  if (Input.IsActionJustPressed("ui_up")) {
-			  var ind = 0;
+			  var ind = 1;
 			  var pos = new Vector3(0.0f, 0.0f, 0.0f);
 			  foreach(Spatial i in GetChildren()) {
 				 
