@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/all_models.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/all_models.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/SortModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/SortModels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/TestScene.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/all_models.tscn" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +35,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Start and Debug.Editor">
+  <component name="RunManager" selected="Start and Debug.Player">
     <configuration name="Attach to Player" type="ConnectRemote" factoryName="Mono Remote" show_console_on_std_err="false" show_console_on_std_out="false" port="23685" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -102,6 +102,12 @@
       <workItem from="1649700666320" duration="627000" />
       <workItem from="1649708217585" duration="738000" />
       <workItem from="1649783488444" duration="1676000" />
+      <workItem from="1649956771801" duration="629000" />
+      <workItem from="1650138358260" duration="159000" />
+      <workItem from="1650138580017" duration="303000" />
+      <workItem from="1650138968053" duration="17000" />
+      <workItem from="1650139018706" duration="2518000" />
+      <workItem from="1650141595518" duration="519000" />
     </task>
     <servers />
   </component>
