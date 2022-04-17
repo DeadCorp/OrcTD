@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/TestScene.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/all_models.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/mannequin.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/mannequin.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/BaseHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/BaseHero.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +109,7 @@
       <workItem from="1650138968053" duration="17000" />
       <workItem from="1650139018706" duration="2518000" />
       <workItem from="1650141595518" duration="519000" />
+      <workItem from="1650177953235" duration="6513000" />
     </task>
     <servers />
   </component>

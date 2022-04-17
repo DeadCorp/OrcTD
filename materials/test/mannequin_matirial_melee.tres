@@ -1,0 +1,8 @@
+[gd_resource type="SpatialMaterial" format=2]
+
+[resource]
+resource_name = "Alpha_Body_MAT"
+vertex_color_use_as_albedo = true
+params_cull_mode = 2
+albedo_color = Color( 0.705882, 0.0666667, 0.0509804, 1 )
+roughness = 0.808292
