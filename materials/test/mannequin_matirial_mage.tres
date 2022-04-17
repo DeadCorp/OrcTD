@@ -5,4 +5,5 @@ resource_name = "Alpha_Body_MAT"
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.0509804, 0.439216, 0.721569, 1 )
+metallic = 0.94
 roughness = 0.808292

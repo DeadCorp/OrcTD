@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_mage.tres" beforeDir="false" afterPath="$PROJECT_DIR$/materials/test/mannequin_matirial_mage.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_melee.tres" beforeDir="false" afterPath="$PROJECT_DIR$/materials/test/mannequin_matirial_melee.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_no_type.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_range.tres" beforeDir="false" afterPath="$PROJECT_DIR$/materials/test/mannequin_matirial_range.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/mannequin.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/mannequin.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script_templates/template_no_comments.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/BaseHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/BaseHero.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +20,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Roaming/Godot/script_templates/no_comments.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6501e74e0e904bacaa92fcd2cdfe0079273c00/88/959ff2d1/RigidBody.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6501e74e0e904bacaa92fcd2cdfe0079273c00/61/a8f2c3b3/CollisionObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6501e74e0e904bacaa92fcd2cdfe0079273c00/68/a1a9560a/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6501e74e0e904bacaa92fcd2cdfe0079273c00/18/24600dd2/AnimationNodeStateMachinePlayback.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13d0d117e9cd4fa18f9877a56bcc704212c00/ec/aa077405/EditorScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -109,7 +125,12 @@
       <workItem from="1650138968053" duration="17000" />
       <workItem from="1650139018706" duration="2518000" />
       <workItem from="1650141595518" duration="519000" />
-      <workItem from="1650177953235" duration="6513000" />
+      <workItem from="1650177953235" duration="7264000" />
+      <workItem from="1650212774069" duration="52000" />
+      <workItem from="1650213276819" duration="3566000" />
+      <workItem from="1650220995814" duration="863000" />
+      <workItem from="1650221988278" duration="528000" />
+      <workItem from="1650222572604" duration="12302000" />
     </task>
     <servers />
   </component>
