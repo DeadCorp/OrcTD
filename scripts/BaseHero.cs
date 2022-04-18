@@ -77,5 +77,11 @@ public class BaseHero : Spatial {
 		}
 		
 	}
+
+	public void _on_DragableObject_DragMove(Node node, Dictionary cast) {
+		var pos = (Vector3) cast["position"];
+		Translation = new Vector3(pos.x, Translation.y, pos.z);
+		
+	}
 	
 }

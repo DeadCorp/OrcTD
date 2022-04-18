@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_mage.tres" beforeDir="false" afterPath="$PROJECT_DIR$/materials/test/mannequin_matirial_mage.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_melee.tres" beforeDir="false" afterPath="$PROJECT_DIR$/materials/test/mannequin_matirial_melee.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_no_type.tres" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_range.tres" beforeDir="false" afterPath="$PROJECT_DIR$/materials/test/mannequin_matirial_range.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/godot-git-plugin/plugin.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/addons/godot-git-plugin/plugin.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/mannequin.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/mannequin.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script_templates/template_no_comments.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/BaseHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/BaseHero.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +128,10 @@
       <workItem from="1650220995814" duration="863000" />
       <workItem from="1650221988278" duration="528000" />
       <workItem from="1650222572604" duration="12302000" />
+      <workItem from="1650305086173" duration="594000" />
+      <workItem from="1650315356038" duration="609000" />
+      <workItem from="1650320152012" duration="7000" />
+      <workItem from="1650320251250" duration="607000" />
     </task>
     <servers />
   </component>

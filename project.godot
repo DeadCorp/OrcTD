@@ -24,6 +24,10 @@ config/name="OrcTD"
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/drag_and_drop_c_sharp/plugin.cfg" )
+
 [gdnative]
 
 singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
