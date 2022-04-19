@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://models/survival_kit/tentClosed.glb" type="PackedScene" id=1]
-[ext_resource path="res://models/survival_kit/bedrollPacked.glb" type="PackedScene" id=2]
-[ext_resource path="res://models/survival_kit/campfire.glb" type="PackedScene" id=3]
+[ext_resource path="res://models/tentClosed.glb" type="PackedScene" id=1]
+[ext_resource path="res://models/bedrollPacked.glb" type="PackedScene" id=2]
+[ext_resource path="res://models/campfire.glb" type="PackedScene" id=3]
 [ext_resource path="res://scenes/test/mannequin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/test/HeroesMerge.cs" type="Script" id=5]
 [ext_resource path="res://addons/drag_and_drop_c_sharp/DragableController.cs" type="Script" id=6]
