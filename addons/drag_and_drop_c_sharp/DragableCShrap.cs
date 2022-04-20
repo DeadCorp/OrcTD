@@ -1,3 +1,4 @@
+#if TOOLS
 using Godot;
 using System;
 
@@ -22,3 +23,4 @@ public class DragableCShrap : EditorPlugin
 		RemoveCustomType("DragableController");
 	}
 }
+#endif

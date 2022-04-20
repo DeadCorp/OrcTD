@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="OrcTD"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/test/TestScene.tscn"
 config/icon="res://icon.png"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [editor_plugins]
 
@@ -1101,6 +1105,15 @@ ui_new_action={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":false,"meta":false,"command":false,"pressed":false,"scancode":39,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[input_devices]
+
+buffering/agile_event_flushing=true
+pointing/emulate_touch_from_mouse=true
+
+[mono]
+
+export/include_scripts_content=true
 
 [physics]
 

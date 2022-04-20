@@ -1,13 +1,10 @@
 using Godot;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Godot.Collections;
 
 [Tool]
 public class BaseHero : Spatial {
 	
-	private const int Maxlevel = 5;
+	private const int MaxLevel = 5;
 
 	public enum HeroTypes {
 		Melee,
@@ -30,8 +27,7 @@ public class BaseHero : Spatial {
 		}
 	}
 	public bool IsMaxLevel { get; set; }
-
-
+	
 	private readonly Dictionary _myData = new Dictionary() {
 		{"HeroType", HeroTypes.Mannequin}, //melee range mage
 		{"AttackSpeed", 10.0 },
@@ -39,10 +35,22 @@ public class BaseHero : Spatial {
 		{"Damage", 10.0 },
 		{"Level", 1 },
 	};
-
-	private DragAndDrop _dragAndDrop = new DragAndDrop();
+	
+	private HeroDragAndDropLogic _dragLogic; 
+	private DragableObject _myDragableObject;
+	
 	public override void _Ready() {
 		InitiateHero(_myData);
+		_myDragableObject = GetNode<DragableObject>("Area/DragableObject");
+		_dragLogic	= new HeroDragAndDropLogic(this);
+		
+		
+		if (_myDragableObject != null) {
+			GD.Print("try bind signals");
+			_myDragableObject.Connect("DragStart", _dragLogic, nameof(_dragLogic.OnDragStart));
+			_myDragableObject.Connect("DragStop", _dragLogic, nameof(_dragLogic.OnDragStop));
+			_myDragableObject.Connect("DragMove", _dragLogic, nameof(_dragLogic.OnDrag));
+		}
 	}
 
 	public void InitiateHero(Dictionary data) {
@@ -54,16 +62,14 @@ public class BaseHero : Spatial {
 
 		GD.Print($" hero : {Name} {{ \n \t HeroType : {HeroType} \n \t AttackSpeed : {AttackSpeed} \n \t AttackRange : {AttackRange}  \n \t Damage : {Damage} \n \t Level : {Level} \n }}");
 	}
-	
-	
 	private void LevelUp() {
-		if (Level == Maxlevel) return;
+		if (Level == MaxLevel) return;
 		AttackSpeed *= 1.35f;
 		AttackRange *= 1.15f;
 		Damage *= 2.0f;
 
 		Level++;
-		if (Level == Maxlevel) 
+		if (Level == MaxLevel) 
 			IsMaxLevel = true;
 		
 	}
@@ -78,10 +84,6 @@ public class BaseHero : Spatial {
 		
 	}
 
-	public void _on_DragableObject_DragMove(Node node, Dictionary cast) {
-		var pos = (Vector3) cast["position"];
-		Translation = new Vector3(pos.x, Translation.y, pos.z);
-		
-	}
+	
 	
 }

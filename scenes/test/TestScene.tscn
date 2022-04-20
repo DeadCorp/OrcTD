@@ -325,12 +325,12 @@ HeroType = 2
 transform = Transform( 0.524698, 0.525835, -0.66947, 0, 0.786419, 0.617693, 0.851289, -0.324102, 0.412632, 0.121383, 3.26244, 3.84336 )
 fov = 83.3
 
-[node name="Area" type="Area" parent="."]
+[node name="DragableController" type="Node" parent="." groups=["DragableController"]]
+script = ExtResource( 6 )
+
+[node name="Area" type="Area" parent="DragableController"]
 collision_layer = 512
 collision_mask = 0
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
+[node name="CollisionShape" type="CollisionShape" parent="DragableController/Area"]
 shape = SubResource( 1 )
-
-[node name="DragableController" type="Node" parent="." groups=["DragableController"]]
-script = ExtResource( 6 )
