@@ -23,7 +23,7 @@ visible = false
 HeroType = 1
 
 [node name="mannequin9" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0.1138, 0.181029, 0.0785301 )
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0.1138, 0.181029, -2.0155 )
 visible = false
 HeroType = 1
 
@@ -38,11 +38,11 @@ visible = false
 HeroType = 1
 
 [node name="mannequin8" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 2.1138, 0.181029, 3.07853 )
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, 0, 0 )
 HeroType = 1
 
 [node name="ClippedCamera" type="ClippedCamera" parent="."]
-transform = Transform( 0.524698, 0.525835, -0.66947, 0, 0.786419, 0.617693, 0.851289, -0.324102, 0.412632, 0.121383, 3.26244, 3.84336 )
+transform = Transform( 0.0828104, 0.486943, -0.8695, 0, 0.872496, 0.488621, 0.996565, -0.0404629, 0.0722517, -2.83296, 1.86309, 0.0822101 )
 fov = 83.3
 
 [node name="Area" type="Area" parent="."]

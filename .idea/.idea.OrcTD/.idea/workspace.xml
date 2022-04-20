@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableCShrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableCShrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/main.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/DragAndDrop.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/HeroesMerge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/HeroesMerge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/mannequin.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/mannequin.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/BaseHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/BaseHero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +135,7 @@
       <workItem from="1650320251250" duration="607000" />
       <workItem from="1650468991951" duration="7689000" />
       <workItem from="1650479601177" duration="1713000" />
-      <workItem from="1650483285970" duration="2771000" />
+      <workItem from="1650483285970" duration="5840000" />
     </task>
     <servers />
   </component>

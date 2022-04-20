@@ -6,7 +6,7 @@ using Godot.Collections;
 public class DragableObject : Node {
 
 	[Signal]
-	delegate void DragStart(Node node);
+	delegate void DragStart(Node node, Vector3 offset);
 
 	[Signal]
 	delegate void DragStop(Node node);
@@ -66,7 +66,9 @@ public class DragableObject : Node {
 			GD.Print("tap");
 			if (mouseButton.Pressed) {
 				current = node.GetParent();
-				EmitSignal(nameof(DragStart), this);
+				var spatial = (Spatial) current;
+				var offset = clickPosition - spatial.Translation;
+				EmitSignal(nameof(DragStart), this, offset);
 			}
 			else if (current != null) {
 				EmitSignal(nameof(DragStop), this);

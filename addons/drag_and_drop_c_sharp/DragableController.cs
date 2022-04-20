@@ -7,15 +7,15 @@ public class DragableController : Node {
     private readonly string groupName = "DragableController";
 
     [Export()] public float RayLenght = 100;
-    private Camera camera;
-    private DragableObject draging;
+    private Camera _camera;
+    private DragableObject _draging;
 
     public override void _EnterTree() {
         AddToGroup(groupName, true);
     }
 
     public override void _Ready() {
-	    camera = GetTree().Root.GetCamera();
+	    _camera = GetTree().Root.GetCamera();
 	    SetPhysicsProcess(false);
     }
 
@@ -30,25 +30,25 @@ public class DragableController : Node {
 	    node.Connect("DragStop", this, "_drag_stop");
     }
 
-    public void _drag_start(DragableObject node) {
-	    draging = node;
+    public void _drag_start(DragableObject node, Vector3 offset) {
+	    _draging = node;
 	    SetPhysicsProcess(true);
     }
     
     public void _drag_stop(DragableObject node) {
-	    draging = null;
+	    _draging = null;
 	    SetPhysicsProcess(false);
     }
 
     public override void _PhysicsProcess(float delta) {
-	    if (draging != null) {
+	    if (_draging != null) {
 		    var mouse = GetViewport().GetMousePosition();
-		    var from = camera.ProjectRayOrigin(mouse);
-		    var to = from + camera.ProjectRayNormal(mouse) * RayLenght;
+		    var from = _camera.ProjectRayOrigin(mouse);
+		    var to = from + _camera.ProjectRayNormal(mouse) * RayLenght;
 		    
-		    Dictionary cast = camera.GetWorld().DirectSpaceState.IntersectRay(from, to, null, 0b1000000000, false, true);
+		    Dictionary cast = _camera.GetWorld().DirectSpaceState.IntersectRay(from, to, null, 0b1000000000, false, true);
 		    if (cast.Count != 0) {
-			    draging.on_hover(cast);
+			    _draging.on_hover(cast);
 		    }
 	    }
     }
