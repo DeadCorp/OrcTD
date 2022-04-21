@@ -30,7 +30,7 @@ public class DragableController : Node {
 	    node.Connect("DragStop", this, "_drag_stop");
     }
 
-    public void _drag_start(DragableObject node, Vector3 offset) {
+    public void _drag_start(DragableObject node) {
 	    _draging = node;
 	    SetPhysicsProcess(true);
     }

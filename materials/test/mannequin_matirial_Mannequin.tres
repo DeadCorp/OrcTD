@@ -2,7 +2,3 @@
 
 [resource]
 resource_name = "Alpha_Body_MAT"
-flags_vertex_lighting = true
-flags_ensure_correct_normals = true
-vertex_color_use_as_albedo = true
-metallic = 1.0

@@ -8,8 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/HeroesMerge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/HeroesMerge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/materials/test/mannequin_matirial_Mannequin.tres" beforeDir="false" afterPath="$PROJECT_DIR$/materials/test/mannequin_matirial_Mannequin.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/mannequin.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/mannequin.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,6 +136,7 @@
       <workItem from="1650468991951" duration="7689000" />
       <workItem from="1650479601177" duration="1713000" />
       <workItem from="1650483285970" duration="5840000" />
+      <workItem from="1650558135124" duration="2258000" />
     </task>
     <servers />
   </component>
