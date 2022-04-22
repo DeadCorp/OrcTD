@@ -26,6 +26,10 @@ enabled=PoolStringArray( "res://addons/drag_and_drop_c_sharp/plugin.cfg" )
 
 singletons=[  ]
 
+[global]
+
+etc=false
+
 [importer_defaults]
 
 scene={
@@ -1121,4 +1125,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
