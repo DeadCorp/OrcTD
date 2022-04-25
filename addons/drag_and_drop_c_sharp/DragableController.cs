@@ -8,7 +8,7 @@ public class DragableController : Node {
 
 	[Export()] public float RayLenght = 100;
 	private Camera _camera;
-	private DragableObject _draging;
+	private DragableObject _dragging;
 
 	public override void _EnterTree() {
 		AddToGroup(groupName, true);
@@ -31,24 +31,24 @@ public class DragableController : Node {
 	}
 
 	public void _drag_start(DragableObject node) {
-		_draging = node;
+		_dragging = node;
 		SetPhysicsProcess(true);
 	}
 	
 	public void _drag_stop(DragableObject node) {
-		_draging = null;
+		_dragging = null;
 		SetPhysicsProcess(false);
 	}
 
 	public override void _PhysicsProcess(float delta) {
-		if (_draging != null) {
+		if (_dragging != null) {
 			var mouse = GetViewport().GetMousePosition();
 			var from = _camera.ProjectRayOrigin(mouse);
 			var to = from + _camera.ProjectRayNormal(mouse) * RayLenght;
 			
 			Dictionary cast = _camera.GetWorld().DirectSpaceState.IntersectRay(from, to, null, 0b1000000000, false, true);
 			if (cast.Count != 0) {
-				_draging.on_hover(cast);
+				_dragging.on_hover(cast);
 			}
 		}
 	}

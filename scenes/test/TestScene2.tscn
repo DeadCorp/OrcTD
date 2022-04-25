@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/test/HeroesMerge.cs" type="Script" id=1]
-[ext_resource path="res://scenes/test/mannequin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/HeroesMerge.cs" type="Script" id=1]
+[ext_resource path="res://Earth_tile-0.vox" type="ArrayMesh" id=2]
+[ext_resource path="res://scenes/test/hero.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/drag_and_drop_c_sharp/DragableController.cs" type="Script" id=4]
-
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 21.4023, 0.197491, 15.4375 )
+[ext_resource path="res://1default_env.tres" type="Environment" id=5]
 
 [node name="Spatial" type="Spatial"]
 
@@ -13,44 +12,327 @@ extents = Vector3( 21.4023, 0.197491, 15.4375 )
 script = ExtResource( 1 )
 
 [node name="mannequin4" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 2.1138, 0.181029, 2.07853 )
-visible = false
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 2.114, 0, 2.079 )
 HeroType = 1
 
 [node name="mannequin5" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0.1138, 0.181029, 3.07853 )
-visible = false
-HeroType = 1
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0.114, 0, 3.079 )
+HeroType = 0
 
 [node name="mannequin9" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0.1138, 0.181029, -2.0155 )
-visible = false
-HeroType = 1
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.1138, 0.181029, -2.0155 )
+HeroType = 0
 
 [node name="mannequin6" parent="Heroes" instance=ExtResource( 3 )]
 transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0.1138, 0.181029, 2.07853 )
-visible = false
-HeroType = 1
+HeroType = 0
 
 [node name="mannequin7" parent="Heroes" instance=ExtResource( 3 )]
 transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 2.1138, 0.181029, 0.0785301 )
-visible = false
-HeroType = 1
+HeroType = 0
 
 [node name="mannequin8" parent="Heroes" instance=ExtResource( 3 )]
 transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, 0, 0 )
+HeroType = 0
+
+[node name="mannequin10" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 5.114, 0, 7.079 )
+HeroType = 0
+
+[node name="mannequin11" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 3.114, 0, 8.079 )
+HeroType = 0
+
+[node name="mannequin12" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 3.1138, 0.181029, 2.9845 )
+HeroType = 0
+
+[node name="mannequin13" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 3.1138, 0.181029, 7.07853 )
+HeroType = 0
+
+[node name="mannequin14" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 5.1138, 0.181029, 5.07853 )
 HeroType = 1
 
-[node name="ClippedCamera" type="ClippedCamera" parent="."]
-transform = Transform( 0.0828104, 0.486943, -0.8695, 0, 0.872496, 0.488621, 0.996565, -0.0404629, 0.0722517, -2.83296, 1.86309, 0.0822101 )
-fov = 83.3
+[node name="mannequin15" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 3, 0, 5 )
+HeroType = 1
 
-[node name="Area" type="Area" parent="."]
-collision_layer = 512
-collision_mask = 0
+[node name="mannequin16" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 11.114, 3, 5.079 )
+HeroType = 1
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-shape = SubResource( 1 )
+[node name="mannequin17" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 9.114, 3, 6.079 )
+HeroType = 1
 
-[node name="DragableController" type="Node" parent="Area" groups=["DragableController"]]
+[node name="mannequin18" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 9.1138, 3.18103, 0.9845 )
+HeroType = 1
+
+[node name="mannequin19" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 9.1138, 3.18103, 5.07853 )
+HeroType = 2
+
+[node name="mannequin20" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 11.1138, 3.18103, 3.07853 )
+HeroType = 2
+
+[node name="mannequin21" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 9, 3, 3 )
+HeroType = 2
+
+[node name="mannequin22" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -7.886, 3, -7.921 )
+HeroType = 2
+
+[node name="mannequin23" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -9.886, 3, -6.921 )
+HeroType = 2
+
+[node name="mannequin24" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -9.8862, 3.18103, -12.0155 )
+HeroType = 2
+
+[node name="mannequin25" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -9.8862, 3.18103, -7.92147 )
+HeroType = 2
+
+[node name="mannequin26" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -7.8862, 3.18103, -9.92147 )
+HeroType = 2
+
+[node name="mannequin27" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -10, 3, -10 )
+HeroType = 2
+
+[node name="mannequin28" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -5.886, 3, 14.079 )
+HeroType = 1
+
+[node name="mannequin29" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -7.886, 3, 15.079 )
+HeroType = 1
+
+[node name="mannequin30" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -7.8862, 3.18103, 9.9845 )
+HeroType = 1
+
+[node name="mannequin31" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -7.8862, 3.18103, 14.0785 )
+HeroType = 1
+
+[node name="mannequin32" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -5.8862, 3.18103, 12.0785 )
+HeroType = 1
+
+[node name="mannequin33" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -8, 3, 12 )
+HeroType = 1
+
+[node name="mannequin34" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 14.114, 3, 14.079 )
+HeroType = 1
+
+[node name="mannequin35" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12.114, 3, 15.079 )
+HeroType = 1
+
+[node name="mannequin36" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12.1138, 3.18103, 9.9845 )
+HeroType = 1
+
+[node name="mannequin37" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12.1138, 3.18103, 14.0785 )
+HeroType = 1
+
+[node name="mannequin38" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 14.1138, 3.18103, 12.0785 )
+HeroType = 1
+
+[node name="mannequin39" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12, 3, 12 )
+HeroType = 1
+
+[node name="mannequin40" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 14.114, 3, -7.921 )
+HeroType = 1
+
+[node name="mannequin41" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12.114, 3, -6.921 )
+HeroType = 1
+
+[node name="mannequin42" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12.1138, 3.18103, -12.0155 )
+HeroType = 1
+
+[node name="mannequin43" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12.1138, 3.18103, -7.92147 )
+HeroType = 1
+
+[node name="mannequin44" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 14.1138, 3.18103, -9.92147 )
+HeroType = 1
+
+[node name="mannequin45" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 12, 3, -10 )
+HeroType = 1
+
+[node name="mannequin46" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 1.114, 3, -16.921 )
+HeroType = 0
+
+[node name="mannequin47" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -0.886, 3, -15.921 )
+HeroType = 0
+
+[node name="mannequin48" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -0.8862, 3.18103, -21.0155 )
+HeroType = 0
+
+[node name="mannequin49" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -0.8862, 3.18103, -16.9215 )
+HeroType = 0
+
+[node name="mannequin50" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 1.1138, 3.18103, -18.9215 )
+HeroType = 0
+
+[node name="mannequin51" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -1, 3, -19 )
+HeroType = 0
+
+[node name="mannequin52" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -21.886, 3, -11.921 )
+HeroType = 0
+
+[node name="mannequin53" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -23.886, 3, -10.921 )
+HeroType = 1
+
+[node name="mannequin54" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -23.8862, 3.18103, -16.0155 )
+HeroType = 1
+
+[node name="mannequin55" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -23.8862, 3.18103, -11.9215 )
+HeroType = 1
+
+[node name="mannequin56" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -21.8862, 3.18103, -13.9215 )
+HeroType = 1
+
+[node name="mannequin57" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -24, 3, -14 )
+HeroType = 1
+
+[node name="mannequin58" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -21.886, 3, 1.079 )
+HeroType = 2
+
+[node name="mannequin59" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -23.886, 3, 2.079 )
+HeroType = 2
+
+[node name="mannequin60" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -23.8862, 3.18103, -3.0155 )
+HeroType = 2
+
+[node name="mannequin61" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -23.8862, 3.18103, 1.07853 )
+HeroType = 2
+
+[node name="mannequin62" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -21.8862, 3.18103, -0.921471 )
+HeroType = 2
+
+[node name="mannequin63" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -24, 3, -1 )
+HeroType = 1
+
+[node name="mannequin64" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -0.4, 0, 3.49692e-08, 0, 0.4, 0, -3.49692e-08, 0, -0.4, -18.4902, 0, 13.5887 )
+HeroType = 1
+
+[node name="mannequin65" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -0.4, 0, 3.49692e-08, 0, 0.4, 0, -3.49692e-08, 0, -0.4, -19.4902, 0, 11.5888 )
+HeroType = 0
+
+[node name="mannequin66" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -0.4, 0, 3.49692e-08, 0, 0.4, 0, -3.49692e-08, 0, -0.4, -14.3958, 0.181029, 11.5886 )
+HeroType = 0
+
+[node name="mannequin67" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -0.4, 0, 3.49692e-08, 0, 0.4, 0, -3.49692e-08, 0, -0.4, -18.4898, 0.181029, 11.5886 )
+HeroType = 0
+
+[node name="mannequin68" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -0.4, 0, 3.49692e-08, 0, 0.4, 0, -3.49692e-08, 0, -0.4, -16.4898, 0.181029, 13.5885 )
+HeroType = 0
+
+[node name="mannequin69" parent="Heroes" instance=ExtResource( 3 )]
+transform = Transform( -0.4, 0, 3.49692e-08, 0, 0.4, 0, -3.49692e-08, 0, -0.4, -16.4113, 0, 11.4748 )
+HeroType = 0
+
+[node name="DragableController" type="Node" parent="." groups=["DragableController"]]
 script = ExtResource( 4 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.766044, -0.28178, 0.577734, 0, 0.898794, 0.438371, -0.642788, -0.335812, 0.688516, 15, 16.3531, 21 )
+environment = ExtResource( 5 )
+projection = 1
+current = true
+size = 26.57
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0575585, 0 )
+width = 50.0
+height = 0.1
+depth = 50.0
+
+[node name="CSGMesh" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4472, 1, 0.255 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh3" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4472, 1, -12.745 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh4" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4472, 1, -8.745 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh5" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5528, 1, -8.745 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh6" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5528, 1, 3.255 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh7" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.44723, 1, 13.255 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh8" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5528, 1, 13.255 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh9" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5528, 1, 21.255 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh10" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4472, 1, 21.255 )
+mesh = ExtResource( 2 )
+
+[node name="CSGMesh11" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4472, 0, 6.255 )
+mesh = ExtResource( 2 )

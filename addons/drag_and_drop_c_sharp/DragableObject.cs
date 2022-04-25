@@ -17,22 +17,22 @@ public class DragableObject : Node {
 
 	private readonly string groupName = "DragableController";
 
-	private DragableController controller;
+	private DragableController _controller;
 
-	private Node current;
+	private Node _current;
 
 
 	public override void _Ready() {
 		var controllers = GetTree().GetNodesInGroup(groupName);
 		if (controllers.Count == 1)
-			controller = (DragableController) controllers[0];
+			_controller = (DragableController) controllers[0];
 
 		if (Engine.EditorHint) {
 			SetProcess(false);
 			return;
 		}
 
-		if (controller == null) {
+		if (_controller == null) {
 			GD.Print("Miss DragableController");
 		}
 		else {
@@ -41,7 +41,7 @@ public class DragableObject : Node {
 			//dragable.Connect("mouse_exited", this, "mouse_exited", new Godot.Collections.Array {dragable}); //create methods if need // cary on android - in click point first will be called input_event - after that mouse_entered/exited
 			dragable.Connect("input_event", this, "input_event", new Godot.Collections.Array {dragable});
 			
-			controller.InitDraggable(this);
+			_controller.InitDraggable(this);
 		}
 
 	}
@@ -63,12 +63,11 @@ public class DragableObject : Node {
 		Shape shapeIdx, Node node) {
 		
 		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == (int) ButtonList.Left) {
-			GD.Print("tap");
 			if (mouseButton.Pressed) {
-				current = node.GetParent();
+				_current = node.GetParent();
 				EmitSignal(nameof(DragStart), this);
 			}
-			else if (current != null) {
+			else if (_current != null) {
 				EmitSignal(nameof(DragStop), this);
 			}
 			
@@ -77,7 +76,7 @@ public class DragableObject : Node {
 
 	public override void _UnhandledInput(InputEvent @event) {
 		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == (int) ButtonList.Left) {
-			if (current != null && !mouseButton.Pressed)
+			if (_current != null && !mouseButton.Pressed)
 				EmitSignal(nameof(DragStop), this);
 		}
 	}

@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Earth_tile-1.vox-6a2ec4c928739ad5d85a86dec722ad6b.mesh"
+
+[deps]
+
+source_file="res://Earth_tile-1.vox"
+dest_files=[ "res://.import/Earth_tile-1.vox-6a2ec4c928739ad5d85a86dec722ad6b.mesh" ]
+
+[params]
+
