@@ -288,13 +288,6 @@ transform = Transform( -0.00414092, -0.000344358, -0.213109, 0.000223163, 0.2131
 [node name="bedrollPacked" parent="Terrain/tentClosed" instance=ExtResource( 2 )]
 transform = Transform( -0.699528, 0, -6.11547e-08, 0, 0.699528, 0, 6.11547e-08, 0, -0.699528, -0.0688148, 0.136, -0.643478 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.929305, -0.107081, -0.353449, 0.214319, -0.62304, 0.752255, -0.300765, -0.774825, -0.556045, 4.64091, 3.71322, 2.18954 )
-visible = false
-light_energy = 1.932
-shadow_enabled = true
-shadow_contact = 0.005
-
 [node name="Heroes" type="Spatial" parent="."]
 script = ExtResource( 5 )
 
@@ -308,11 +301,11 @@ HeroType = 1
 
 [node name="mannequin7" parent="Heroes" instance=ExtResource( 4 )]
 transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 1.87893, 0.181, 3.06197 )
-HeroType = 1
+HeroType = 2
 
 [node name="mannequin3" parent="Heroes" instance=ExtResource( 4 )]
 transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 3.17653, 0.181029, 2.07853 )
-HeroType = 0
+HeroType = 2
 
 [node name="mannequin4" parent="Heroes" instance=ExtResource( 4 )]
 transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 5.08077, 0.181029, 2.07853 )

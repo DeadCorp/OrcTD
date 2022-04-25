@@ -20,7 +20,7 @@ settings/stdout/print_fps=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/drag_and_drop_c_sharp/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [gdnative]
 
