@@ -1,9 +1,27 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scenes/test/Viewport.gd" type="Script" id=1]
-
 [sub_resource type="ViewportTexture" id=1]
 viewport_path = NodePath("Viewport")
+
+[sub_resource type="GDScript" id=2]
+script/source = "tool
+extends Viewport
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	size = $Label.rect_size
+	pass"
 
 [node name="Sprite3D" type="Sprite3D"]
 billboard = 1
@@ -12,9 +30,8 @@ texture = SubResource( 1 )
 [node name="Viewport" type="Viewport" parent="."]
 size = Vector2( 30, 30 )
 transparent_bg = true
-msaa = 4
 render_target_v_flip = true
-script = ExtResource( 1 )
+script = SubResource( 2 )
 
 [node name="Label" type="Label" parent="Viewport"]
 margin_right = 30.0

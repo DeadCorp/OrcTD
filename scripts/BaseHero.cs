@@ -70,14 +70,15 @@ public class BaseHero : Spatial {
 	private bool _availableToMerge = false;
 	private int _level;
 
+	public readonly string myGroupName = "Heroes";
+
 
 	public override void _Ready() {
 		InitiateHero(MyData);
 		var myDragableObject = GetNodeOrNull<DragableObject>("Area/DragableObject");
 		
-		var mergeHandler = GetParentOrNull<HeroesMerge>();
 		var dragableArea = GetNodeOrNull<Area>("DragArea");
-		var dragLogic = new HeroDragAndDropLogic(this, dragableArea, mergeHandler);
+		var dragLogic = new HeroDragAndDropLogic(this, dragableArea);
 		
 		
 		
@@ -94,7 +95,8 @@ public class BaseHero : Spatial {
 		AttackRange = (float) data["AttackRange"];
 		Damage = (float) data["Damage"];
 		Level = (int) data["Level"];
-
+		
+		AddToGroup(myGroupName);
 		//GD.Print($" hero : {Name} {{ \n \t HeroType : {HeroType} \n \t AttackSpeed : {AttackSpeed} \n \t AttackRange : {AttackRange}  \n \t Damage : {Damage} \n \t Level : {Level} \n }}");
 	}
 	public bool LevelUp() {

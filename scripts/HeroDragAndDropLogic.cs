@@ -17,24 +17,22 @@ public class HeroDragAndDropLogic : Object {
     private const string DragObjectsGroup = "DragableObject";
     private Vector3 _myLastPos;
     private bool _pressed = false;
-    public Spatial Target { get; set; }
-    public Area DragableArea { get; set; }
+    private Spatial Target { get; set; }
+    private Area DragableArea { get; set; }
 
     public HeroDragAndDropLogic() {
         
     }
-    public HeroDragAndDropLogic(Spatial target,  Area dragableArea, Node mergeHandler) {
+
+    public HeroDragAndDropLogic(Spatial target, Area dragableArea) {
         Target = target;
         DragableArea = dragableArea;
         _myLastPos = Target.Translation;
-        
-        Connect("OnHeroMerge", mergeHandler, "OnHeroesMerge");
-        Connect("OnHeroStartMerge", mergeHandler, "OnHeroesStartMerge");
-        Connect("OnHeroEndMerge", mergeHandler, "OnHeroesEndMerge");
+
     }
 
+
     public void OnDragStart(Node node) {
-        //GD.Print($"dragstart {node}");
         _pressed = true;
         _myLastPos = Target.Translation;
         DragableArea.SetCollisionLayerBit(9, true); // activate dragable area
@@ -42,20 +40,16 @@ public class HeroDragAndDropLogic : Object {
     }
 
     public void OnDragStop(Node node) {
-        if (_pressed) { 
-            //GD.Print($"dragstop {node}");
-            Target.Translation = _myLastPos;
-            _pressed = false;
-            DragableArea.SetCollisionLayerBit(9, false); // deactivate dragable area
-            DragEndAdditionalInstructions();
-        }
+        if (!_pressed) return;
+        Target.Translation = _myLastPos;
+        _pressed = false;
+        DragableArea.SetCollisionLayerBit(9, false); // deactivate dragable area
+        DragEndAdditionalInstructions();
     }
 
     public void OnDrag(Node node, Dictionary cast) {
-        //GD.Print($"dragmove {node.Name}");
         var pos = (Vector3) cast["position"];
         Target.Translation = new Vector3(pos.x, Target.Translation.y, pos.z);
-        
     }
 
     private void StopDragAllOtherObjects(Node node) {
@@ -70,11 +64,53 @@ public class HeroDragAndDropLogic : Object {
     }
 
     private void DragStartAdditionalInstructions() {
-        EmitSignal(nameof(OnHeroStartMerge), Target);
-    } private void DragEndAdditionalInstructions() {
+        HeroesStartMerge();
+    }
+
+    private void DragEndAdditionalInstructions() {
         var myCollided = Target.GetNodeOrNull<Area>("Area")?.GetOverlappingAreas();
         if (myCollided?.Count != 0)
-            EmitSignal(nameof(OnHeroMerge), Target, myCollided);
-        EmitSignal(nameof(OnHeroEndMerge), Target);
+            HeroesMerge(myCollided);
+        HeroesEndMerge();
+    }
+
+    private void HeroesMerge(Array collided) {
+        
+        var heroArea = collided[0] as Area;
+        var hero = heroArea?.GetParentOrNull<BaseHero>();
+        GD.Print($"MERGE_DEBUG: HERO {hero} COLLIDED {collided}");
+        if (hero != null) {
+            var feedHero = Target as BaseHero;
+            if (hero.HeroType == feedHero?.HeroType && hero.Level == feedHero.Level) {
+                if (hero.LevelUp())
+                    Target.QueueFree();
+            }
+        }
+    }
+
+    private void HeroesStartMerge() {
+        var feedHero = Target as BaseHero;
+        if (feedHero == null) return;
+        foreach (var child in GetMergeGroup()) {
+            if (child is BaseHero hero && hero != feedHero) {
+                if (hero.HeroType == feedHero?.HeroType && hero.Level == feedHero.Level) {
+                    hero.AvailableToMerge = true;
+                }
+            }
+        }
+    }
+
+    private void HeroesEndMerge() {
+        foreach (var child in GetMergeGroup()) {
+            if (child is BaseHero hero) {
+                hero.AvailableToMerge = false;
+            }
+        }
+    }
+
+    private Array GetMergeGroup() {
+        if (Target is BaseHero hero)
+            return hero.GetTree().GetNodesInGroup(hero.myGroupName);
+        return new Array();
     }
 }

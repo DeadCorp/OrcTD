@@ -6,101 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/addons/drag_and_drop_c_sharp/DragableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default_env.tres" beforeDir="false" afterPath="$PROJECT_DIR$/default_env.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/bedrollPacked.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/bedrollPacked.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/campfire.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/campfire.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tentClosed.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tentClosed.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_bump.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_bump.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerInner.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerInner.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerLarge.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerLarge.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerOuter.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerOuter.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerRound.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerRound.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerSquare.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_cornerSquare.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_crossing.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_crossing.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_crystal.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_crystal.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_dirt.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_dirt.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_dirtHigh.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_dirtHigh.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_end.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_end.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_endRound.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_endRound.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_endRoundSpawn.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_endRoundSpawn.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_endSpawn.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_endSpawn.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_hill.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_hill.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverBridge.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverBridge.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverCorner.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverCorner.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverFall.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverFall.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverSlope.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverSlope.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverSlopeLarge.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverSlopeLarge.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverStraight.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverStraight.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverTransition.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_riverTransition.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_rock.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_rock.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_slope.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_slope.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_spawn.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_spawn.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_spawnRound.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_spawnRound.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_split.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_split.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_straight.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_straight.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_straightHill.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_straightHill.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_straightHillLarge.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_straightHillLarge.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_transition.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_transition.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_tree.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_tree.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_treeDouble.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_treeDouble.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_treeQuad.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_treeQuad.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideCorner.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideCorner.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideSplit.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideSplit.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideStraight.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideStraight.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideTransition.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tiles/tile_wideTransition.glb.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/all_models/all_models.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/HeroesMerge.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Earth_tile-1.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprite3D.tscn" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/mannequin.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/Viewport.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/hero.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/hero.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/BaseHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/BaseHero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/HeroesMerge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/HeroesMerge.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +143,7 @@
       <workItem from="1650558135124" duration="2258000" />
       <workItem from="1650652801791" duration="622000" />
       <workItem from="1650900874706" duration="14090000" />
+      <workItem from="1650988451513" duration="2665000" />
     </task>
     <servers />
   </component>
