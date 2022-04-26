@@ -6,15 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaffd61-3e0f-4241-a126-f5cd96a2dc77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OrcTD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Earth_tile-1.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprite3D.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/TestScene.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test/TestScene2.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1default_env.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/test/Sprite3D.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/Sprite3D.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/Viewport.gd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/test/hero.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test/hero.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/BaseHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/BaseHero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/HeroDragAndDropLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/HeroesMerge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/HeroesMerge.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +139,7 @@
       <workItem from="1650558135124" duration="2258000" />
       <workItem from="1650652801791" duration="622000" />
       <workItem from="1650900874706" duration="14090000" />
-      <workItem from="1650988451513" duration="2665000" />
+      <workItem from="1650988451513" duration="4456000" />
     </task>
     <servers />
   </component>

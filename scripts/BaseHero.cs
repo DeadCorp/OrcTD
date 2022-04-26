@@ -79,10 +79,7 @@ public class BaseHero : Spatial {
 		
 		var dragableArea = GetNodeOrNull<Area>("DragArea");
 		var dragLogic = new HeroDragAndDropLogic(this, dragableArea);
-		
-		
-		
-		
+	
 		myDragableObject?.Connect("DragStart", dragLogic, nameof(dragLogic.OnDragStart));
 		myDragableObject?.Connect("DragStop", dragLogic, nameof(dragLogic.OnDragStop));
 		myDragableObject?.Connect("DragMove", dragLogic, nameof(dragLogic.OnDrag));
