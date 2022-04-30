@@ -13,7 +13,7 @@ public class BaseHero : Spatial {
 	}
 
 	private HeroTypes _heroType = HeroTypes.Mannequin;
-	public float AttackSpeed { get; set; }
+	public float Speed { get; set; }
 	public float AttackRange { get; set; }
 	public float Damage { get; set; }
 
@@ -37,10 +37,10 @@ public class BaseHero : Spatial {
 
 	public bool IsMaxLevel { get; set; }
 	
-	[Export()]
+	//[Export()]
 	private Dictionary MyData { get; set; } = new Dictionary() {
 		{"HeroType", HeroTypes.Mannequin}, //melee range mage
-		{"AttackSpeed", 10.0},
+		{"Speed", 10.0},
 		{"AttackRange", 10.0},
 		{"Damage", 10.0},
 		{"Level", 1},
@@ -72,10 +72,11 @@ public class BaseHero : Spatial {
 
 	public readonly string myGroupName = "Heroes";
 
+	private HeroCombatLogic _combatLogic;
 
 	public override void _Ready() {
 		InitiateHero(MyData);
-		var myDragableObject = GetNodeOrNull<DragableObject>("Area/DragableObject");
+		var myDragableObject = GetNodeOrNull<DragableObject>("PickUpArea/DragableObject");
 		
 		var dragableArea = GetNodeOrNull<Area>("DragArea");
 		var dragLogic = new HeroDragAndDropLogic(this, dragableArea);
@@ -83,22 +84,23 @@ public class BaseHero : Spatial {
 		myDragableObject?.Connect("DragStart", dragLogic, nameof(dragLogic.OnDragStart));
 		myDragableObject?.Connect("DragStop", dragLogic, nameof(dragLogic.OnDragStop));
 		myDragableObject?.Connect("DragMove", dragLogic, nameof(dragLogic.OnDrag));
-		
+
+		_combatLogic = new HeroCombatLogic(this);
+
 	}
 
 	private void InitiateHero(Dictionary data) {
 		HeroType = (HeroTypes) data["HeroType"] == HeroTypes.Mannequin ? HeroType : (HeroTypes) data["HeroType"];
-		AttackSpeed = (float) data["AttackSpeed"];
+		Speed = (float) data["Speed"];
 		AttackRange = (float) data["AttackRange"];
 		Damage = (float) data["Damage"];
 		Level = (int) data["Level"];
-		
+
 		AddToGroup(myGroupName);
-		//GD.Print($" hero : {Name} {{ \n \t HeroType : {HeroType} \n \t AttackSpeed : {AttackSpeed} \n \t AttackRange : {AttackRange}  \n \t Damage : {Damage} \n \t Level : {Level} \n }}");
 	}
 	public bool LevelUp() {
 		if (Level == MaxLevel) return false;
-		AttackSpeed *= 1.35f;
+		Speed *= 1.35f;
 		AttackRange *= 1.15f;
 		Damage *= 2.0f;
 
@@ -106,7 +108,7 @@ public class BaseHero : Spatial {
 		if (Level == MaxLevel) 
 			IsMaxLevel = true;
 		
-		MyData["AttackSpeed"] = AttackSpeed;
+		MyData["Speed"] = Speed;
 		MyData["AttackRange"] = AttackRange;
 		MyData["Damage"] = Damage;
 		MyData["Level"] = Level;
@@ -128,3 +130,4 @@ public class BaseHero : Spatial {
 	
 	
 }
+

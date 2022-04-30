@@ -68,7 +68,7 @@ public class HeroDragAndDropLogic : Object {
     }
 
     private void DragEndAdditionalInstructions() {
-        var myCollided = Target.GetNodeOrNull<Area>("Area")?.GetOverlappingAreas();
+        var myCollided = Target.GetNodeOrNull<Area>("PickUpArea")?.GetOverlappingAreas();
         if (myCollided?.Count != 0)
             HeroesMerge(myCollided);
         HeroesEndMerge();

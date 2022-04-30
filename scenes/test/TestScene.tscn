@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/test/Earth_tile_green.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Earth_tile-0.vox" type="ArrayMesh" id=2]
 [ext_resource path="res://scenes/test/hero.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/test/BadGuys/BadGuysSpawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://addons/drag_and_drop_c_sharp/DragableController.cs" type="Script" id=6]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.0431373, 0.427451, 0.0509804, 1 )
+
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 5 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.67451, 0.65098, 0.254902, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 3 )
 
 [node name="TestScene" type="Spatial"]
 
@@ -11,412 +22,179 @@
 script = ExtResource( 6 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.66677, -0.542156, 0.511355, -0.0285526, 0.667053, 0.744463, -0.744716, -0.510986, 0.429291, 3.01228, 16.995, 9.141 )
-projection = 1
+transform = Transform( 0.999991, -0.00386399, 0.00201147, 0, 0.46175, 0.88701, -0.0043562, -0.887002, 0.461745, -2.33525, 24.4146, 17.3826 )
 current = true
 size = 21.99
 
 [node name="Terrain" type="Spatial" parent="."]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, -1, 0 )
 
-[node name="Earth_tile-0" type="MeshInstance" parent="Terrain"]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0 )
-cast_shadow = 0
-mesh = ExtResource( 2 )
+[node name="Obstacles" type="Spatial" parent="Terrain"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Terrain/Obstacles"]
+transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 9, 0, 1, 11 )
+mesh = SubResource( 4 )
 material/0 = null
 
-[node name="Earth_tile-5" type="MeshInstance" parent="Terrain"]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -80, 0, 0 )
-cast_shadow = 0
-mesh = ExtResource( 2 )
+[node name="MeshInstance2" type="MeshInstance" parent="Terrain/Obstacles"]
+transform = Transform( 12, 0, 0, 0, 1, 0, 0, 0, 9, -8, 1, -11 )
+mesh = SubResource( 4 )
 material/0 = null
 
-[node name="Earth_tile-1" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 28 )
-skeleton = NodePath("../..")
+[node name="MeshInstance3" type="MeshInstance" parent="Terrain/Obstacles"]
+transform = Transform( 6, 0, 0, 0, 1, 0, 0, 0, 11, 14, 1, -9 )
+mesh = SubResource( 4 )
+material/0 = null
 
-[node name="Earth_tile-6" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 3, -80, 2, 28 )
-skeleton = NodePath("../..")
+[node name="Ground" type="Spatial" parent="Terrain"]
+transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0 )
 
-[node name="Earth_tile-2" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-07, 0, 3, 0, 1, 0, -5, 0, -6.55671e-08, 28, 2, -4 )
-skeleton = NodePath("../..")
-
-[node name="Earth_tile-8" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( -2.62268e-07, 0, 2, 0, 1, 0, -6, 0, -8.74228e-08, -112, 2, -16 )
-skeleton = NodePath("../..")
-
-[node name="Earth_tile-9" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( -1.04907e-07, 0, 0.8, 0, 1, 0, -4.2, 0, -6.11959e-08, -96, 2, -0.8 )
-skeleton = NodePath("../..")
-
-[node name="Earth_tile-10" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( -8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, -96, 2, -32 )
-skeleton = NodePath("../..")
-
-[node name="Earth_tile-3" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( -9.77524e-07, 0, 6, 0, 1, 0, -6, 0, -9.77524e-07, -16, 2, -16 )
-skeleton = NodePath("../..")
-
-[node name="Earth_tile-7" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( -9.77524e-07, 0, 6, 0, 1, 0, -6, 0, -9.77524e-07, -64, 2, -16 )
-skeleton = NodePath("../..")
-
-[node name="Earth_tile-4" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( -5.20549e-07, 0, 4, 0, 1, 0, -1, 0, -2.08219e-06, 24, 2, -36 )
-skeleton = NodePath("../..")
+[node name="MeshInstance" type="MeshInstance" parent="Terrain/Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00278645, 0, 9.53674e-08 )
+mesh = SubResource( 2 )
+material/0 = null
 
 [node name="Heroes" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
 
 [node name="mannequin2" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4033, -1, 1 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.40327, -1, 1 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin3" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4033, -1, 3 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin4" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4033, -1, 5 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin5" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, 8 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin6" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 8 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin7" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 8 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin8" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 4 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin9" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1, 4 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin10" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1, 8 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin11" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1, 8 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin12" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1, 4 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin13" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1, 4 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin14" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -1, 4 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin15" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -1, 8 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin16" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -9.53674e-07, 5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1, 8 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin17" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, -2 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin18" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -8 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin19" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -6 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin20" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22879, 0, -2.645 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77121, -1, -5.645 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin21" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.851, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.851, -1, -4 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin22" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -4 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin23" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, -4 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin24" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, -8 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin25" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, -8 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin26" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, -4 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin27" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -4 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin28" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -8 )
 HeroType = 0
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin29" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1, -8 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin30" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -8 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin31" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -4 )
 HeroType = 2
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
 
 [node name="mannequin32" parent="Heroes" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -9.53674e-07, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1, -4 )
 HeroType = 1
-MyData = {
-"AttackRange": 10.0,
-"AttackSpeed": 10.0,
-"Damage": 10.0,
-"HeroType": 3,
-"Level": 1
-}
+
+[node name="BadGuysSpawner" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1, 0 )
+EnemyCount = 10
+TimerTime = 0.5
+
+[node name="PathPoints" type="Spatial" parent="BadGuysSpawner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, 0 )
+
+[node name="Position3D" type="Position3D" parent="BadGuysSpawner/PathPoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.2, 0 )
+
+[node name="Position3D2" type="Position3D" parent="BadGuysSpawner/PathPoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.2, -20 )
