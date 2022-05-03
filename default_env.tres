@@ -5,5 +5,10 @@
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
-ambient_light_color = Color( 0.968627, 0.972549, 0.784314, 1 )
-ambient_light_energy = 1.1
+background_energy = 1.3
+fog_sun_amount = 1.0
+dof_blur_near_distance = 0.01
+glow_strength = 1.53
+glow_blend_mode = 0
+adjustment_contrast = 1.31
+adjustment_saturation = 8.0

@@ -8,25 +8,27 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "",
-"class": "GitAPI",
-"language": "NativeScript",
-"path": "res://addons/godot-git-plugin/git_api.gdns"
-} ]
-_global_script_class_icons={
-"GitAPI": ""
-}
-
 [application]
 
 config/name="OrcTD"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/test/TestScene.tscn"
 config/icon="res://icon.png"
+
+[debug]
+
+settings/stdout/print_fps=true
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/MagicaVoxelImporter/plugin.cfg", "res://addons/drag_and_drop_c_sharp/plugin.cfg" )
 
 [gdnative]
 
-singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+singletons=[  ]
+
+[global]
+
+etc=false
 
 [importer_defaults]
 
@@ -1108,10 +1110,20 @@ ui_new_action={
  ]
 }
 
+[input_devices]
+
+buffering/agile_event_flushing=true
+pointing/emulate_touch_from_mouse=true
+
+[mono]
+
+export/include_scripts_content=true
+
 [physics]
 
 common/enable_pause_aware_picking=true
 
 [rendering]
 
+vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"

@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="SpatialMaterial" id=20]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id=19]
+
+[sub_resource type="Curve" id=21]
+min_value = -2.0
+max_value = 2.0
+_data = [ Vector2( 0, 0.218182 ), 0.0, 6.23838, 0, 0, Vector2( 0.994819, 1.98182 ), 0.223984, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=22]
+_data = [ Vector2( 0.015544, 0.0272727 ), 0.0, 0.526364, 0, 0, Vector2( 0.963731, 0.1 ), 0.38281, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=23]
+offsets = PoolRealArray( 0.00588235, 0.547059, 1 )
+colors = PoolColorArray( 0.878906, 0.844574, 0, 1, 0.835938, 0.713502, 0, 1, 0.822735, 0.824219, 0.634262, 0 )
+
+[node name="CPUParticles" type="CPUParticles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.058589 )
+material_override = SubResource( 20 )
+amount = 100
+lifetime = 0.7
+randomness = 0.25
+mesh = SubResource( 19 )
+emission_shape = 5
+emission_ring_radius = 0.45
+emission_ring_inner_radius = 0.43
+emission_ring_height = 0.0
+emission_ring_axis = Vector3( 0, 1, 0 )
+direction = Vector3( 0, 1, 0 )
+spread = 10.49
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+angular_velocity = -139.8
+angular_velocity_random = 1.0
+linear_accel = 0.1
+linear_accel_curve = SubResource( 21 )
+angle = 360.0
+angle_random = 1.0
+scale_amount_curve = SubResource( 22 )
+color_ramp = SubResource( 23 )
